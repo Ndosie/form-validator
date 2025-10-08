@@ -4,4 +4,4 @@ An in time form validator which validates email, phonenumber, password, postal c
 # Demo
 ![Demo](demo.gif)
 
-Have some view [here](https://ndosie.github.io/form-validator/)
+See live demo [here](https://ndosie.github.io/form-validator/)
