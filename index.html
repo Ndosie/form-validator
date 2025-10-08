@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Form Validation</h1>
+        <p>* Fields are required.</p>
+        <form novalidate>
+            <div class="form_inputs">
+                <div>
+                    <label for="first_name">First Name *</label>
+                    <input type="text" id="first_name" name="first_name" minlength="3" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="last_name">Last Name *</label>
+                    <input type="text" id="last_name" name="last_name" minlength="3" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="phone_number">Phone Number *</label>
+                    <input type="tel" id="phone_number" name="phone_number" placeholder="000-000-000000" pattern="(\d{3}-\d{3}-\d{6})" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirm Password *</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="country">Country *</label>
+                    <input type="data" id="country" list="countries" name="country" required/>
+                    <span class="error" aria-live="polite"></span>
+                    <datalist id="countries">
+                        <option>Burundi</option>
+                        <option>Congo</option>
+                        <option>Kenya</option>
+                        <option>Rwanda</option>
+                        <option>Tanzania</option>
+                        <option>Uganda</option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="country">Postal Code *</label>
+                    <input type="text" id="postal_code" name="postal_code" placeholder="00000" pattern="(\d{5})" required/>
+                    <span class="error" aria-live="polite"></span>
+                </div>
+            </div>
+            <div class="button">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
